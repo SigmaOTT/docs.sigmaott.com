@@ -15,8 +15,8 @@ Sigma Media Live helps you convert live video content from one format and packag
 
 **Topics**
 
-- [Related Services](03-relate-services.md)
-- [Visit Sigma Transcode Live](04-what-is-accessing.md)
+- [Related Services] (03-relate-services.md)
+- [Visit Sigma Transcode Live] (04-what-is-accessing.md)
 
 ## How live media works
 
@@ -24,9 +24,9 @@ Sigma Media Live helps you convert live video content from one format and packag
 
 You can access the Sigma Media Live system via the following methods:
 
-- **Sigma Streaming Portal**: Visit the system administration website [Sigma Streaming Portal](https://portal.sigmaott.com/) and select Transcode to be able to install and configure information and resources of Sigma Transcode Live.
+- **Sigma Streaming Portal**: Truy cập vào trang web quản trị hệ thống [Sigma Streaming Portal](https://portal.sigma.video/) và chọn mục Transcode để có thể cài đặt, cấu hình các thông tin, tài nguyên của Sigma Transcode Live\.
 
-- **Sigma Media Live API**: You can refer to the [Sigma Transcode API Reference](https://sigmaott.com/apis/sigma-transcode-live.html#/) api system for more information and implementation of API tasks that interact with the Sigma Transcode Live system.
+- **Sigma Media Live API**:  Bạn có thể tham khảo thêm qua hệ thống Api  [Sigma Transcode API Reference](https://sigma.video/apis/sigma-transcode-live.html#/) để biết thêm thông tin và các thực hiện các tác vụ Api tương tác với hệ thống Sigma Transcode Live.
 
 ## Related services
 

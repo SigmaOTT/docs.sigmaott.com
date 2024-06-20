@@ -12,13 +12,13 @@ These buttons will show up in the last column of the list table.
 
 ![Action Buttons](/images/media-live/manager-list-action.png)
 
-***
+---
 
 :::info
 Because each piece of content on the application has different features and operations, the interface showing the function buttons may differ slightly.
 :::
 
-***
+---
 
 ### Detailed description
 
@@ -83,8 +83,8 @@ The paging interface consists of 4 main components:
   ![Page Select](/images/media-live/um-pagination/page-selection.png)
 
   - List existing pages.
-  - The current page is highlighted with a blue background color![Active Page](/images/media-live/um-pagination/actived-page.png) { height=17px } .
-  - Scroll to the previous/next page one by one by selecting the ![Previous](/images/media-live/um-pagination/previous.png) { height=17px } and ![Next](/images/media-live/um-pagination/next.png) { height=17px } .
+  - The current page is highlighted with a blue background color! [Active Page] (/images/media-live/um-pagination/actived-page.png) { height=17px } .
+  - Scroll to the previous/next page one by one by selecting the ! [Previous] (/images/media-live/um-pagination/previous.png) { height=17px } and ! [Next] (/images/media-live/um-pagination/next.png) { height=17px } .
 
 - Navigate to any page.
 

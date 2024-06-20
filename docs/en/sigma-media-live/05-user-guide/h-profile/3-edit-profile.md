@@ -19,7 +19,7 @@ At the main interface, users can make modifications by moving their mouse on the
 
 When the user clicks on the 'edit' icon, the system will open a pop-up window **Update Profile** in the middle of the screen, displaying the previously entered data.
 
-![Profile update](/images/media-live/profile/update.png)
+! [Profile update] (/images/media-live/profile/update.png)
 
 _Pop-up Update Profile_
 

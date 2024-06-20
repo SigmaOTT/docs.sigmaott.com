@@ -49,7 +49,7 @@ Before you start, you need to prepare a valid audio file.
 
 A Check Watermarking pop-up window will appear.
 
-![Check watermarking](/images/media-live/watermark/upload.png)
+! [Check watermarking] (/images/media-live/watermark/upload.png)
 
 By default, display the 'Upload' option.
 
@@ -83,7 +83,7 @@ Give permission to use the microphone for the tool, connect your device to the d
 
 **Step 1**: User selects Record in the pop-up Check watermarking window. Display the corresponding recording request information in the watermarking Test pop-up window.
 
-![Check watermarking](/images/media-live/watermark/record.png)
+! [Check watermarking] (/images/media-live/watermark/record.png)
 
 **Step 2**: Click the recording icon. Connect the device successfully.
 
@@ -107,7 +107,7 @@ _In case the user clicks the **Check other records** icon the system will perfor
 
 **The system performs the testing process during the live recording period**.
 
-![Check watermarking](/images/media-live/watermark/check.png)
+! [Check watermarking] (/images/media-live/watermark/check.png)
 
 Users can cancel the watermarking check by clicking the 'Cancel' button, which returns to the upload interface.
 
@@ -115,7 +115,7 @@ Users can cancel the watermarking check by clicking the 'Cancel' button, which r
 
 After checking within the specified time period, the result will be displayed as follows:
 
-![Check watermarking](/images/media-live/watermark/result.png)
+! [Check watermarking] (/images/media-live/watermark/result.png)
 
 1. If **watermark not found**: Message **No watermark found.**
 2. Find watermark
@@ -132,4 +132,19 @@ After checking within the specified time period, the result will be displayed as
 
 ### Invalid upload
 
-Only allow uploads of files that meet the regulations listed earl
+Only allow uploads of files that meet the regulations listed earlier. When the user clicks the test button, the system conducts a check, detects an unsupported file and displays a message in the right corner of the screen:
+
+**Invalid file, please select another file.**
+
+### No speakerphone access
+
+Access to equipment is a prerequisite during the recording test. When the user clicks the recording icon and the process cannot continue, the system displays a message like this:
+
+- Subject: Please grant permission to use the microphone for the tool.
+- Contents: Check your system settings to make sure Sigma streaming has access to your microphone and try again.
+
+### Exceeding system test time
+
+During the inspection, something went wrong. After a test time of more than 20 seconds without results, the system displays the message:
+
+**Process error, please try again.**

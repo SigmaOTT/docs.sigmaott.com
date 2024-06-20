@@ -17,7 +17,7 @@ At the main interface, users can make copies by moving their mouse on the 'Clone
 
 **Step 2:** When the user clicks on the 'Duplicate' icon, the system will open a pop-up window **Duplicate Profile** in the middle of the screen, displaying the previously entered data.
 
-![Create a profile copy](/images/media-live/profile/duplicate.png)
+! [Create a profile copy] (/images/media-live/profile/duplicate.png)
 
 _Pop-up Profile Cloning_
 

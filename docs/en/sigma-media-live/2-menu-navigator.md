@@ -10,13 +10,13 @@ The Dashboard screen displays basic information, an overview of the services run
 
 Display service overview **Transcode & Package**
 
-![Transcode/packager Channel Status](/images/media-live/um-dashboard/transcode.png)
+! [Transcode/packager Channel Status] (/images/media-live/um-dashboard/transcode.png)
 
 2. Machine state
 
 Display server-related information **Transcode & Package**
 
-![Server Status](/images/media-live/um-dashboard/machine.png)
+! [Server Status] (/images/media-live/um-dashboard/machine.png)
 
 1. Origin state
 
@@ -32,13 +32,13 @@ Display information related to Origin system KPIs including:
 
 - Note: Requests to Origin are divided into 2 types **segment** (Request for media- ts, m4v file), **manifest** (request for manifest file - m3u8, mpd)
 
-![System status origin](/images/media-live/um-dashboard/origin.png)
+! [System status origin] (/images/media-live/um-dashboard/origin.png)
 
 ## **Menu panel**
 
 List of system features menus. This list will depend on the system feature pack you are provided with
 
-![Menu List](/images/media-live/um-panel-menu.png) { width=150px }
+! [Menu List] (/images/media-live/um-panel-menu.png) { width=150px }
 
 ## Breadcrumb
 
@@ -103,15 +103,22 @@ The Sigma Transcoder system manages 2 types of servers:
 - **Transcode**: Performs multimedia content transcoding tasks
 - **Package**: Perform packaging tasks
 
-![Server classification](/images/media-live/um-machine-tab.png)
+! [Server classification] (/images/media-live/um-machine-tab.png)
 
 On the system interface screen, you can list and monitor servers by different items:
 
-![Server List](/images/media-live/um-machine-list.png)
+! [Server List] (/images/media-live/um-machine-list.png)
 
 Where:
 
 | headline    | Describe                                                       |
 | ----------- | -------------------------------------------------------------- |
 | **#**       | Server sequence number                                         |
-| **Machine** | Address of the reg
+| **Machine** | Address of the registered server                               |
+| **GPU**     | Does the machine use **GPU** or not                            |
+| **CPU**     | The machine uses **CPU**                                       |
+| **Task**    | The number of tasks being executed on the server               |
+| **Speed**   | Lowest task execution speed on server (0-1) |
+| **Percent** | %load of the server executing the task                         |
+| **Ram**     | % Ram server in use                                            |
+| **Status**  | Server status **live** or **dead**                             |

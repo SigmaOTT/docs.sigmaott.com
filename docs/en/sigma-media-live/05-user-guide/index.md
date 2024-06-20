@@ -1,5 +1,5 @@
 ---
 id: user-guide-sigma-media-live
-title: Begin with Sigma Media Live
+title: Hướng dẫn sử dụng
 order: 5
 ---

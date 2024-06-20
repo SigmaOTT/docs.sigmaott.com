@@ -5,112 +5,73 @@ order: 2
 
 # Get started with Media Video On Demand (Media VOD)
 
-## Job Setup
+## Luồng thực hiện
 
-To set up a job, you need to prepare the following tasks:
+Để bắt đầu nhanh chóng làm quen với Media Video On Demand (Media VOD), người dùng cần thực hiện các bước sau:
 
-- Set up server operation
-- Prepare the input stream
-- Determine the destination of the output stream
-- Set up job configuration as desired
-- Create a job
+![Luồng thực hiện làm quen với Media VOD](/images/media-vod/introduce/get-started-flow.png)
 
-Once done, you can create a successful job in Sigma Media VOD. Besides, you can save the configuration of the job as **template** to save time for the next time.
+## Truy cập vào hệ thống Sigma Streaming
 
-## Prepare
+1. Thực hiện [Đăng kí tài khoản](../../sigma-streaming-platform/02-user-management/a-sign-up.md) hoặc [đăng nhập](../../sigma-streaming-platform/02-user-management/c-sign-in.md) để truy cập hệ thống quản lý của **Sigma Streaming Platform** `https://portal.sigma.video`
+2. Hiển thị Danh sách ứng dụng, **chọn ứng dụng** cần truy cập.
+3. Hiển thị mặc định vào trang **tổng quan ứng dụng**.
 
-Before you start, you need to prepare the following tasks:
+## Set up server operation
 
-- Have an account that accesses the management system of **Sigma Streaming Platform**\* 'https\://portal.sigmaott.com'
-- Accounts with authorized app access with Media VOD
+Đảm bảo rằng trong quá trình sử dụng sản phẩm VOD, máy chủ phải đang trong **trạng thái hoạt động**
 
-## Step 1: Access the Sigma Media VOD system
+Nếu bạn chưa kích hoạt cho hoạt động của máy chủ, bạn nên thực hiện cài đặt máy trên máy của người dùng (local)
 
-To use , you need to have an account and permission to access, view, and perform allowed actions.
+![Cài đặt máy chủ](/images/media-vod/introduce/add-server.png)
 
-1. Visit the 'https\://portal.sigmaott.com/app' link
-2. Display the App List, **select the app** to access.
-3. Display by default to the **App Overview.**
-4. In the sidebar, select the Media VOD product.
-5. Display the default page in the Dashboard Page (which provides an overview of operational status, statistics, and other important information when using the product).
+1. Tại sidebar, chọn mục **Server**
+2. Hiển thị danh sách máy chủ, **chọn thêm máy chủ**
+3. Hiển thị thông tin cài đặt máy, trong đó bao gồm _**Registation Token**_
+4. Sao chép `Registation Token` và thực hiện cài máy trên máy của người dùng (local) [Xem chi tiết tại đây](../../sigma-media-server/04-getting-started/04-install-new-machine.md)
+5. Successfully installed machines display at the top of the list of machines
+6. Thêm giấy phép (license) để kích hoạt hoạt động của máy chủ [Xem chi tiết tại đây](../../sigma-media-server/04-getting-started/05-add-license.md)
 
-## Step 2: Prepare the server
+## Tạo mới VOD job
 
-Make sure that during your use, the server is in an active state
+Để tạo mới một video VOD, người dùng cần khởi tạo một công việc mới (job) theo các bước sau:
 
-If you have not enabled the operation of the server, you should perform the installation of the machine on your machine (local)
+1. Truy cập vào trang quản lý sigma VOD (Video on Demand).
+2. Hiển thị trang danh sách các job (công việc).
+3. Nhấp vào nút `Thêm mới` để bắt đầu tạo job.
+4. Chuyển đến trang Tạo mới Job.
+5. Thực hiện điền đầy đủ thông tin
 
-1. In the sidebar, select Server
-2. Select the tab on the header of **Sigma VOD Server**
-3. Display VOD server list, **select add server**
-4. Display machine installation information, including Registation Token
-5. Copy the 'Registation Token' and perform the installation on your machine (local)
-6. Successfully installed machines display at the top of the list of machines
+- [Chọn máy chủ](../06-user-guide/c-vod-job-management/2-create-job.md#bước-1-chọn-máy-chủ)
+- [Chọn đầu vào](../06-user-guide/c-vod-job-management/2-create-job.md#bước-2-chọn-đầu-vào)
+- [Chọn đầu ra](../06-user-guide/c-vod-job-management/2-create-job.md#bước-3-chọn-đầu-ra-destination)
+- [Thiết lập cấu hình job](../06-user-guide/c-vod-job-management/2-create-job.md#bước-4-cấu-hình-job)
 
-## Step 3: Prepare the input stream
+6. Nhấp vào nút `Tạo job`
+7. Hệ thống sẽ tiến hành tạo job để chuyển mã video và sau đó hiển thị người dùng trở lại danh sách các job.
 
-The system allows support for input flows, including
+## Quản lý VOD job
 
-- Files from your machine
-- On the system's Library
-- 3rd party links
-- Sample video available on the system
+Tại danh sách job, người dùng có thể xem được thông tin về tiến độ mã hóa, trạng thái, thời gian chuyển mã, thời gian chuyển mã còn lại, kích cỡ của file và máy chủ được chỉ định để tiến hành chuyển mã.
 
-### Input file from your machine
+[Xem chi tiết tại đây](../06-user-guide/c-vod-job-management/1-vod-job-management.md#xem-danh-sách-công-việc)
 
-The system allows the selection of input files from your machine, accepted with live media file formats such as 'audio file (MP3)', 'video file (MP4)'' 'HLS (HTTP Live Streaming)' or 'DASH (Dynamic Adaptive Streaming over HTTP)'.
+![Xem danh sách VOD job](/images/media-vod/job-management/view-job-list.png)
 
-The system displays relevant information about the file such as file name, format, size, and time of last creation or edit.
+Nhấp vào **"Tên job"** để xem thông tin chi tiết bao gồm:
 
-### On the system's Library
+- **Máy**: máy được chỉ định thực hiện job
+- **Thời gian chuyển mã còn lại**: hiển thị thời gian chuyển mã còn lại của tệp đầu vào
+- **Thanh trạng thái của job**: thể hiện trạng thái hiện tại của job
+- **Thông tin của tập tin đầu vào**, bao gồm: Liên kết, định dạng, bộ giải mã video, bộ giải mã audio, độ phân giải, kích cỡ và thời lượng
+- **Thông tin của tập tin đầu ra**, bao gồm: Tên, liên kết, xem trước (preview), định dạng, bộ giải mã video, bộ giải mã audio, độ phân giải, kích cỡ, thời lượng và các hành động được phép.
 
-The Library system is available, you can choose from **asset audio and video**
+[Xem chi tiết tại đây](../06-user-guide/c-vod-job-management/1-vod-job-management.md#xem-chi-tiết-công-việc)
 
-Information about each asset such as name, format, duration and avatar is displayed.
+![Xem thông tin chi tiết job](/images/media-vod/job-management/view-detail-job.png)
 
-Allows you to preview audio and video assets before selecting them as inputs, helping to ensure that you choose the right asset for your needs.
+## Xóa VOD job
 
-### 3rd party links
+Once you have created and launched the job. Sau đó, job hoàn thành (trạng thái Complete) hoặc quá trình xảy ra lỗi (trạng thái Error) để đóng các job không cần thiết, bạn cần thực hiện thao tác xoá job
 
-If the input files from your computer or the videos on the system's library do not suit your needs, you can use a video link from a 3rd party.
-
-The system only supports http or http(s)\*\* URLs
-
-Example:
-
-```
-http://example.com/video.mp4
-```
-
-### Sample video available on the system
-
-In addition to the above options, the system provides you with sample videos, displaying information related to the video (such as video title, resolution, duration, ,...) so that you may be able to make an easier and more appropriate choice.
-Example:
-
-```
-Pexels-Yaroslav-Shuraev-6985325 (2160p).mp4
-Resolution: 3840x2160
-Duration: 00:00:14
-Type: video
-Format: mp4
-Codec: h265
-FPS: 23.98
-```
-
-## Step 4: Determine the destination of the output stream
-
-After processing input stream (video) transcoding, you should define a destination to store the output stream (video already transcoded), the system supports the output stream destination:
-
-- Save in a folder at your computer
-- Save at the system's Library
-- Save at 3rd party
-
-### Save in a folder at your computer
-
-After processing the input stream (video) transcoding, you can save it in a folder on your machine.
-
-### Save at 3rd party
-
-3rd party storage support systems such as **FTP(S)** and **Generic S3**
-
-For
+[Xem chi tiết tại đây](../06-user-guide/c-vod-job-management/1-vod-job-management.md#xóa-job)

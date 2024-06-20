@@ -20,7 +20,7 @@ A few notes, as well as general descriptive information when users add and edit 
 
 In a form will include multiple data fields, each data field will consist of 2 components: _Title_ and _Data input/selector_.
 
-- The _title_ section displays the name information. The data field description information is displayed when the mouse pointer is moved to the ![Info Icon](/images/media-live/um-form-rules/info-icon.png).
+- The _title_ section displays the name information. The data field description information is displayed when the mouse pointer is moved to the ! [Info Icon] (/images/media-live/um-form-rules/info-icon.png).
 
   ![More Info](/images/media-live/um-form-rules/description.png)
 
@@ -62,9 +62,9 @@ When manipulating the funnel creation/editing form, the template will require ma
 
 In the process of data processing system, in case an error appears, the items in the form that currently have errors will change to **red**, when clicking on those parts, the user will see error details.
 
-![msg](/images/media-live/um-form-rules/transcode-modify.png)
+! [msg] (/images/media-live/um-form-rules/transcode-modify.png)
 
-![msg](/images/media-live/um-form-rules/transcode-detail-msg.png)
+! [msg] (/images/media-live/um-form-rules/transcode-detail-msg.png)
 
 When manipulating the funnel/template creation/editing form, users need to perform many steps in turn to be able to complete the task.
 
@@ -73,7 +73,7 @@ For example, for creating a new channel, 2 main steps should be performed:
 ![Channel Steps](/images/media-live/um-transcode-forms/channel-step-01.png)
 
 1. Select a channel type, including 2 types: _Create from scratch_ and _Create from template_.
-   After the user completes **step 1** and clicks the ![Next step button](/images/media-live/um-transcode-forms/next-step-btn.png), all user data at this step will be recorded before moving to **step 2**.
+   After the user completes **step 1** and clicks the ! [Next step button] (/images/media-live/um-transcode-forms/next-step-btn.png), all user data at this step will be recorded before moving to **step 2**.
 
 2. Enter all required information.
    The interface as well as the data will be displayed depending on the options that the user has set from **step 1** before.
@@ -87,4 +87,10 @@ In step 2, there are a few options for users to navigate their data setup:
   - 'Submit then back' the user will be redirected to the channel/template list page.
   - The 'Save as template' message is saved as a new template.
 
-Alternatively, if you want to go back to **step 1** ear
+Alternatively, if you want to go back to **step 1** earlier, click the ! [Previous Button] (/images/media-live/um-transcode-forms/previous-btn.png). However, all currently entered data will be deleted, and the system also issues a message displayed in the middle of the screen for the user to confirm before performing.
+
+! [Redirection Confirmation] (/images/media-live/um-transcode-forms/redirection-confirmation.png)
+
+If you press 'OK', the interface will return to step 1 and all data is deleted.
+
+If 'Cancel' is pressed, the system cancels the operation again.

@@ -1,5 +1,5 @@
 ---
-title: Release notes
+title: Ghi chú phát hành
 order: 1
 ---
 

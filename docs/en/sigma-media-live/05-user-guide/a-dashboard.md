@@ -25,12 +25,12 @@ The screen consists of 3 sections/items of information:
 
 - Bar charts help users track the total number of alerts that appear over time.
 
-| Name                    | Function                                                                                           |
-| ----------------------- | -------------------------------------------------------------------------------------------------- |
-| **Chart title**         | Alerts                                                                                             |
-| **Horizontal axis**     | Timelines, broken down by hours                                                                    |
+| Name                    | Function                                                                                                           |
+| ----------------------- | ------------------------------------------------------------------------------------------------------------------ |
+| **Chart title**         | Alerts                                                                                                             |
+| **Horizontal axis**     | Timelines, broken down by hours                                                                                    |
 | **Vertical shaft**      | Value milestones, the gap between values **30.**                                                   |
-| **Performance track**   | Show values when moving the mouse to a column                                                      |
+| **Performance track**   | Show values when moving the mouse to a column                                                                      |
 | **Horizontal pull bar** | Do not split the value when dragging or stretching the chart to make it easier for viewers to see. |
 
 ## Product documentation

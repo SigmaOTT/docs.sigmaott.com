@@ -13,7 +13,7 @@ The user wants to make 1 copy with the preset that was previously available, kee
 
 After that, a pop-up window will appear, displaying the previously entered information, allowing the user to edit all information fields
 
-![Create preset copy](/images/media-live/preset/duplicate-preset.png)
+! [Create preset copy] (/images/media-live/preset/duplicate-preset.png)
 
 **Step 2:** The user enters the required information.
 

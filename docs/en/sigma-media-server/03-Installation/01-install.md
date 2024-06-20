@@ -3,26 +3,26 @@ title: Install Sigma Media Server
 order: 1
 ---
 
-# Installing Sigma Media Server 
+# Cài đặt Sigma Media Server
 
-**Sigma Media Server** is software that allows you to manage and stream multimedia content directly. It supports various video and audio formats, as well as features for live streaming and recording.
+**Sigma Media Server** là một phần mềm cho phép bạn quản lý và phát trực tiếp nội dung đa phương tiện. Nó hỗ trợ nhiều định dạng video và âm thanh, cũng như các tính năng phát trực tiếp và ghi hình.
 
-Below are instructions for installing Sigma Media Server on CentOS, Ubuntu, and Docker:
+Dưới đây là hướng dẫn cài đặt Sigma Media Server trên CentOS, Ubuntu và Docker:
 
-- [Installation on CentOS](03-centos.md)
-- [Installation on Ubuntu](03-ubuntu.md)
-- [Installation using Docker](03-docker.md)
+- [Cài đặt trên CentOS](02-centos.md)
+- [Cài đặt trên Ubuntu](03-ubuntu.md)
+- [Cài đặt trên Docker](04-docker.md)
 
-## Note:
+## Lưu ý:
 
-Installation steps may vary depending on your operating system version.
-Please ensure you have root or sudo privileges to perform the installation steps.
+Các bước cài đặt có thể thay đổi tùy theo phiên bản hệ điều hành của bạn.
+Vui lòng đảm bảo rằng bạn có quyền root hoặc sudo để thực hiện các bước cài đặt.
 
-## Tips:
+## Mẹo:
 
-- You can use container management tools like Docker Compose to easily manage Sigma Media Server containers.
-- You can configure Sigma Media Server to use cache memory to improve performance.
+Bạn có thể sử dụng các công cụ quản lý container như Docker Compose để quản lý container Sigma Media Server dễ dàng hơn.
+Bạn có thể cấu hình Sigma Media Server để sử dụng bộ nhớ cache để cải thiện hiệu suất.
 
-## Support:
+## Hỗ trợ:
 
-If you encounter any issues during the installation or usage of Sigma Media Server, please refer to the official documentation or contact Sigma Media Solution's support team.
+Nếu bạn gặp bất kỳ sự cố nào khi cài đặt hoặc sử dụng Sigma Media Server, vui lòng tham khảo tài liệu chính thức hoặc liên hệ với bộ phận hỗ trợ của Sigma Media Solution.

@@ -13,17 +13,17 @@ Allows managing and organizing video content from various sources. It supports f
 
 **Topic:**
 
-[Create Job](/docs/en/sigma-media-vod/05-user-guide/b-job-management/1-create-job.md)
+[Tạo công việc](../06-user-guide/c-vod-job-management/2-create-job.md)
 
-[View job listing](/docs/en/sigma-media-vod/05-user-guide/b-job-management/2-view-job-list.md)
+[Xem danh sách công việc](../06-user-guide/c-vod-job-management/1-vod-job-management.md#xem-danh-sách-công-việc)
 
-[View job details](/docs/en/sigma-media-vod/05-user-guide/b-job-management/3-view-details-job.md)
+[Xem chi tiết công việc](../06-user-guide/c-vod-job-management/1-vod-job-management.md#xem-chi-tiết-công-việc)
 
-[Job cloning](/docs/en/sigma-media-vod/05-user-guide/b-job-management/4-duplicate-job.md)
+[Nhân bản job](../06-user-guide/c-vod-job-management/1-vod-job-management.md#nhân-bản-job)
 
-[Retry job](/docs/en/sigma-media-vod/05-user-guide/b-job-management/5-retry-job.md)
+[Thử lại job](../06-user-guide/c-vod-job-management/1-vod-job-management.md#thử-lại-job)
 
-[Delete job](/docs/en/sigma-media-vod/05-user-guide/b-job-management/6-delete-job.md)
+[Xóa job](../06-user-guide/c-vod-job-management/1-vod-job-management.md#xóa-job)
 
 ## Manage folder mechanisms to monitor
 
@@ -33,19 +33,19 @@ When the system detects a change in the directory (e.g. new file created, file e
 
 **Topic:**
 
-[Create a folder tracking mechanism](/docs/en/sigma-media-vod/05-user-guide/b-job-management/1-create-job.md)
+[Tạo cơ chế theo dõi thư mục](../06-user-guide/d-watch-folder-management/2-create-watch-folder-rule.md)
 
-[See directory rules list](/docs/en/sigma-media-vod/05-user-guide/b-job-management/2-view-job-list.md)
+[Xem danh sách quy tắc thư mục](../06-user-guide/d-watch-folder-management/1-watch-folder-rule-management.md#xem-danh-sách-cơ-chế-thư-mục-cần-theo-dõi-watch-folder-rule)
 
-[Edit folder rules](/docs/en/sigma-media-vod/05-user-guide/b-job-management/3-view-details-job.md)
+[Chỉnh sửa quy tắc thư mục](../06-user-guide/d-watch-folder-management/1-watch-folder-rule-management.md#chỉnh-sửa-cơ-chế-thư-mục-cần-theo-dõi-watch-folder-rule)
 
-[Delete folder rules](/docs/en/sigma-media-vod/05-user-guide/b-job-management/4-duplicate-job.md)
+[Xóa quy tắc thư mục](../06-user-guide/d-watch-folder-management/1-watch-folder-rule-management.md#xóa-quy-tắc-thư-mục)
 
-[View work history](/docs/en/sigma-media-vod/05-user-guide/b-job-management/5-retry-job.md)
+[Xem lịch sử công việc](../06-user-guide/d-watch-folder-management/1-watch-folder-rule-management.md#xem-lịch-sử-công-việc-job-được-tạo-ra-từ-quy-tắc-thư-mục)
 
-[Stop tracking folder](/docs/en/sigma-media-vod/05-user-guide/b-job-management/6-delete-job.md)
+[Dừng theo dõi thư mục](../06-user-guide/d-watch-folder-management/1-watch-folder-rule-management.md#dừng-theo-dõi-thư-mục)
 
-[Continue to follow the folder](/docs/en/sigma-media-vod/05-user-guide/b-job-management/6-delete-job.md)
+[Tiếp tục theo dõi thư mục](../06-user-guide/d-watch-folder-management/1-watch-folder-rule-management.md#tiếp-tục-theo-dõi-thư-mục)
 
 ## Manage configuration templates
 
@@ -57,10 +57,6 @@ In addition to setting up configurations for jobs to perform transcoding, the sy
 
 Different from the transmission of live and actual content, pseudo-live streaming creates an experience that resembles watching a live broadcast despite the fact that it is played from a previously recorded video source.
 
-**Topic:**
+[Xem chi tiết tại đây](../06-user-guide/c-vod-job-management/5-pseudo-live.md)
 
 ## Batch Job transcode
-
-If you want to migrate multiple resources that are stored on a server or other source and these resources are publicly accessible, creating each job takes time. Therefore, to optimize time for users, we support moving resources by batches. In this way, you can quickly transcode a large number of files with n jobs output and reduce traffic usage.
-
-**Topic:**

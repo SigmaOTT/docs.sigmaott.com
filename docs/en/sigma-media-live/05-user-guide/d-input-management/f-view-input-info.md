@@ -11,7 +11,7 @@ On the input list screen (Transcode/Package), at the input where you want to vie
 
 - Click the icon in the **Machine** column to view basic information of the assigned machine, including
 
-![details of input](/images/media-live/input/view-input-info-1.png)
+! [details of input] (/images/media-live/input/view-input-info-1.png)
 
 - Status icons (Running, Paused, Dead, Frezeed)
 - Machine name
@@ -19,7 +19,7 @@ On the input list screen (Transcode/Package), at the input where you want to vie
 - Memory capacity of the machine used (%)
 - Click the icon in the **Source** column to view the source information of the input, including:
 
-![details of input](/images/media-live/input/view-input-info-2.png)
+! [details of input] (/images/media-live/input/view-input-info-2.png)
 
 - Display Private (Secondary) Network Interface data
 - Display primary/secondary source data for each source

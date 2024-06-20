@@ -12,11 +12,11 @@ Once you've initiated your channel, you can manage and monitor its health via cm
 1. Access to the channel list
 2. Select the channel to monitor and select the channel name to open channel monitoring
 
-Information inside channel monitoring, you can see at [Channel monitoring](../06-monitor-manage/02-monitor.md).
+Information inside channel monitoring, you can see at [Channel monitoring](.. /06-monitor-manage/02-monitor.md).
 
 ## To manage channels
 
 1. Access to the channel list
 2. Select channels to manage and perform management operations
 
-Information about manageable operations can be found at [Channel Management](../06-monitor-manage/01-manage-service.md).
+Information about manageable operations can be found at [Channel Management](.. /06-monitor-manage/01-manage-service.md).

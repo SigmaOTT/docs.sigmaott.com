@@ -87,4 +87,4 @@ Step 4: [Create the desired channel and run it](./e-step4.md)
 
 Step 5: [Channel Management and Monitoring](./f-step5.md)
 
-Step 6: [Delete channel.](./g-step6.md)
+Step 6: [Delete channel.] (./g-step6.md)

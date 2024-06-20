@@ -151,4 +151,78 @@ curl -X POST "https://localhost:9999" \
     },
     "APPS": [                                                        
         {
-      
+            "name": "portal-local",
+            "state": "running",
+            "Life": "1D09h31m20s",
+            "process": {
+                "pid": 1467337,
+                "cpu": "0.0%",
+                "ram": "28MB"
+            }
+        },
+        {
+            "name": "nginx",
+            "state": "running",
+            "Life": "7h00m50s",
+            "process": {
+                "pid": 1945814,
+                "cpu": "0.0%",
+                "ram": "346MB",
+                "Child": 64
+            }
+        },
+        {
+            "name": "prometheus-nginxlog-exporter",
+            "state": "running",
+            "Life": "1D09h31m20s",
+            "process": {
+                "pid": 1467321,
+                "CPU": "0.1%",
+                "ram": "22MB"
+            }
+        },
+        {
+            "name": "origin",
+            "state": "running",
+            "Life": "1D09h31m20s",
+            "process": {
+                "pid": 1467340,
+                "CPU": "0.5%",
+                "ram": "38MB"
+            }
+        },
+        {
+            "name": "plugin-manager",
+            "state": "running",
+            "Life": "1D09h31m20s",
+            "process": {
+                "pid": 1467328,
+                "cpu": "0.0%",
+                "ram": "30MB"
+            }
+        },
+        {
+            "name": "victoria-metrics",
+            "state": "running",
+            "Life": "1D09h31m20s",
+            "process": {
+                "pid": 1467323,
+                "CPU": "0.3%",
+                "ram": "110MB"
+            }
+        }
+    ],
+    "nats": {
+        "ID": "E3971EC5-460D-4FB7-B957-7120A37421BC.Sigma-Server-GPU-15-A5C8F624-651F-403B-9294-1610C83249B1",
+        "license": "Y7KI4-HHQX5-0N9QN-X8TLN-VOPE7",
+        "hook": 5000,
+        "startup": "2024-03-01T07:22:30.805Z",
+        "connected": 1
+    },
+    "licenseStatus": "VALID",
+    "ec": 0,
+    "result": {},
+    "dt": 0,
+    "now": "2024-03-02T16:53:51.624Z"
+}
+```

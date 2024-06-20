@@ -3,7 +3,7 @@ title: Introduce
 order: 1
 ---
 
-# Sigma Media VOD
+# Dịch vụ Media Video On Demand (Media VOD)
 
 Media Video On Demand **(Media VOD)** is a system that provides a flexible and quality digital entertainment experience, allowing users to select and watch video content according to the preferences of each individual anytime, anywhere on many existing devices such as TVs,  computer, tablet, phone,... via internet connection.
 
@@ -15,7 +15,7 @@ Supports a variety of input source formats: MP4 (MPEG-4), MP3 (MPEG-3), HLS (HTT
 
 The system will perform the process of transcoding, converting formats and changing the technical parameters of a video file to optimize the video content for online broadcasting or to suit different devices and viewing environments.
 
-![How the solution works](/images/media-vod/introduce/how-it-work-vod.png)
+! [How the solution works] (/images/media-vod/introduce/how-it-work-vod.png)
 
 Web browsers can be used for desktop editing, including popular browsers such as Chrome, Coc Coc, Firefox, Opera, Microsoft Edge, and Safari.
 

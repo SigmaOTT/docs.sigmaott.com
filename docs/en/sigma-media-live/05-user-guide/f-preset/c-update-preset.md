@@ -11,7 +11,7 @@ order: 3
 
 The system will open a pop-up window with the information previously entered, allowing to edit all fields
 
-![Edit preset](/images/media-live/preset/update-preset.png)
+! [Edit preset] (/images/media-live/preset/update-preset.png)
 
 **Step 2**: The user makes an edit to the information and then presses the **Confirm** button
 

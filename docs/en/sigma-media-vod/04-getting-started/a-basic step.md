@@ -5,20 +5,17 @@ order: 1
 
 ### Basic steps
 
-- Step 1:
-  [How to Access](b-get-started.md#step-1-access-system-sigma-media-vod)
+- Bước 1:
+  [Truy cập vào hệ thống Sigma Streaming](b-get-started.md#truy-cập-vào-hệ-thống-sigma-streaming)
 
-- Step 2:
-  [Server preparation](b-get-started.md#step-2-prepare-server)
+- Bước 2:
+  [Thiết lập hoạt động của máy chủ](b-get-started.md#thiết-lập-hoạt-động-của-máy-chủ)
 
-- Step 3:
-  [Prepare input stream](b-get-started.md#step-3-prepare-thread-input)
+- Bước 3:
+  [Tạo mới VOD job](b-get-started.md#tạo-mới-vod-job)
 
-- Step 4:
-  [Determine the destination of the output stream](b-get-started.md#step-4-determine-destination-of-output-stream)
+- Bước 4:
+  [Quản lý VOD job](b-get-started.md#quản-lý-vod-job)
 
-- Step 5:
-  [Job configuration](b-get-started.md#step-5-set-shape-job)
-
-- Step 6:
-  [Create job](b-get-started.md#step-6-create-job-job)
+- Bước 5:
+  [Xóa VOD job](b-get-started.md#xóa-vod-job)

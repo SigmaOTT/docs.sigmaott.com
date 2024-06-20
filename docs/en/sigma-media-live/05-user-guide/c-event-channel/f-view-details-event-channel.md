@@ -13,7 +13,7 @@ order: 6
 
 **Step 2:** Display the event channel details interface with the following information:
 
-![View event channel details](/images/media-live/event-channel/view-details-event-channel.png)
+! [View event channel details] (/images/media-live/event-channel/view-details-event-channel.png)
 
 - Status of the event channel, icon _**copy**_ (make a copy of the channel's ID)
 

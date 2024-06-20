@@ -1,158 +1,177 @@
 ---
-title: Register Server on Marketplace
+title: Đăng kí máy chủ trên Marketplace
 order: 5
 ---
 
-# Register Sigma Media Server on Cloud Marketplace
+# Hướng dẫn đăng kí máy chủ Sigma Media Server
 
-Allow users to easily register existing servers onto the Sigma Server system based on the Web Browser Registrator through Cloud Marketplace platforms such as AWS, Google Cloud, Azure, and DigitalOcean.
+Cho phép người dùng dễ dàng đăng ký Server sẵn có lên hệ thống Sigma Server dựa trên Registrator Web Browser thông qua các nền tảng Cloud Marketplace như AWS, Google Cloud, Azure, và DigitalOcean
 
-The Marketplace provides 2 machine versions for users to register:
+Marketplace cung cấp 2 phiên bản máy cho người dùng đăng ký:
 
-- **Sigma Media Server Free**: Free version
-- **Sigma Media Server Pro**: Pro version
+- **Sigma Media Server Free**: Phiên bản miễn phí
+- **Sigma Media Server Pro**: Phiên bản Pro
 
 > [!NOTE]
-> **No limit on the number of machines registered**
+> **Không giới hạn số lượng máy chủ được đăng ký**
 
+## Luồng thực hiện
 
+Để đăng ký Sigma Media Server trên Marketplace, người dùng cần thực hiện theo các bước sau:
 
+![Register-server-flow](../../../public/images/media-server/register-server-on-M/flow-vie.png)
 
-## Flow
+## Điều kiện tiên quyết
 
-To register a Sigma Media Server on the Marketplace, users need to follow these steps:
+- Thực hiện [Đăng ký](../../sigma-streaming-platform/02-user-management/a-sign-up.md) hoặc [đăng nhập](../../sigma-streaming-platform/02-user-management/c-sign-in.md) để truy cập vào hệ thống quản lý của _**Sigma Streaming Platform**_ tại `https://portal.sigma.video`.
+- Người dùng đã hoàn thành quá trình onboarding: [thu thập thông tin], [hướng dẫn sử dụng sản phẩm], [danh sách nhiệm vụ onboard]
 
-![Register-server-flow](/images/media-server/register-server-on-M/flow-register-server.png)
+## Truy cập trang đăng ký máy chủ
 
-## Pre-condition
+Người dùng sẽ được chuyển hướng từ trang Marketplace hoặc có thể chủ động truy cập thông qua liên kết URL `http://{{VM_IP}}:4000`
 
-- Perform [Sign up](../../sigma-streaming-platform/02-user-management/a-sign-up.md) or [sign in](../../sigma-streaming-platform/02-user-management/c-sign-in.md) to access the management system of the ***Sigma Streaming Platform*** at `https://portal.sigma.video`.
-- The user has **completed** the onboarding process: [collected information], [product tour], [checklist onboarding]
+với **VM_IP:** Địa chỉ IP của Sigma Media Server
 
-## Access the server registration page
-
-User will be redirected from the Marketplace page or can actively access it through the URL link `http://{{VM_IP}}:4000`
-
-
-with **VM_IP:** The IP address of the Sigma Media Server
-
-
-The system displays the Server Registration screen with relevant information such as **server information (Server Info), license information (License Info)**, and **server registration information (Registration Info)**.
+Hệ thống hiển thị màn hình Đăng ký máy chủ với thông tin liên quan như **thông tin máy chủ (Server Info), thông tin giấy phép (License Info)** và **thông tin đăng ký máy chủ (Registration Info)**.
 
 ![dashboard-none-register](/images/media-server/register-server-on-M/registration-none-1.png)
 
-With the following details:
+Với các chi tiết sau:
 
-- **Button "Register Server"**: Perform server registration
+- **Nút "Đăng ký máy chủ"**: Thực hiện đăng ký máy chủ
 
-| **Server Info**      | **Description**                             |
-| -------------------- | ------------------------------------------- |
-| **Type**             | Type of server - **Sigma Media Server Pro** |
-| **Status**           | Server status                               |
-| **Operating System** | Operating system of the local machine       |
-| **IP Address**       | Server IP address                           |
-| **Port**             | Server port                                 |
-| **Ram Usage**        | Server RAM Usage                            |
-| **CPU Usage**        | Server CPU Usage                            |
-| **GPU Usage**        | Server GPU Usage                            |
-| **Version**          | Server version                              |
+| **Thông tin máy chủ** | **Mô tả**                                 |
+| --------------------- | ----------------------------------------- |
+| **Loại**              | Loại máy chủ - **Sigma Media Server Pro** |
+| **Trạng thái**        | Trạng thái máy chủ                        |
+| **Hệ điều hành**      | Hệ điều hành của máy cục bộ               |
+| **Địa chỉ IP**        | Địa chỉ IP của máy chủ                    |
+| **Cổng**              | Cổng máy chủ                              |
+| Mức sử dụng RAM       | RAM của máy chủ                           |
+| **Mức sử dụng CPU**   | CPU của máy chủ                           |
+| **GPU sử dụng**       | GPU của máy chủ                           |
+| **Phiên bản**         | Phiên bản máy chủ                         |
 
-| **License info**   | **Description**                              |
-| ------------------ | -------------------------------------------- |
-| **License Code**   | License activation code for server usage     |
-| **License Status** | Status of the license assigned to the server |
+| **Thông tin giấy phép**  | **Mô tả**                                       |
+| ------------------------ | ----------------------------------------------- |
+| **Mã giấy phép**         | Mã kích hoạt giấy phép cho việc sử dụng máy chủ |
+| **Trạng thái giấy phép** | Trạng thái của giấy phép được gán cho máy chủ   |
 
-| **Registration Info** | **Description**                  |
-| --------------------- | -------------------------------- |
-| **Name**              | Server name                      |
-| **App ID**            | ID of the registered application |
-| **Ingest App**        | Configure the Ingest app         |
-| **Origin App**        | Configure the Origin App         |
+| **Thông tin đăng ký** | **Mô tả**                  |
+| --------------------- | -------------------------- |
+| **Tên**               | Tên máy chủ                |
+| **ID Ứng dụng**       | ID của ứng dụng đã đăng ký |
+| **Ingest App**        | Cấu hình ứng dụng Ingest   |
+| **Origin App**        | Cấu hình ứng dụng Origin   |
 
+\*\*Cài đặt Nâng cao \*\*bao gồm: **Storage**, **Metrics** và **Log**
 
-- **Advanced Settings** includes: **Storage**, **Metrics** and **Log**
+| Storage                                  | **Mô tả**                                                                        |
+| ---------------------------------------- | -------------------------------------------------------------------------------- |
+| **Data Dir**                             | Thông tin đường dẫn lưu trữ cho luồng Live                                       |
+| **Expire (s)**        | Thời gian lưu trữ cho luồng Trực tiếp (giây)                  |
+| **Scanning time (s)** | Thời gian quét định kỳ ổ đĩa lưu trữ (giây) cho Luồng Live    |
+| **Catchup Dir**                          | Thông tin đường dẫn lưu trữ cho luồng Catchup                                    |
+| **Expire (s)**        | Thời gian lưu trữ cho luồng Catchup (giây)                    |
+| **Scanning time (s)** | Thời gian quét định kỳ ổ đĩa lưu trữ (giây) cho Luồng Catchup |
 
-| Storage               | **Description**                                              |
-| --------------------- | ------------------------------------------------------------ |
-| **Data Dir**          | Storage path information for the Live stream                 |
-| **Expire (s)**        | Storage time information for the Live stream (seconds)       |
-| **Scanning time (s)** | Regular storage drive scan time (seconds) for Live stream    |
-| **Catchup Dir**       | Storage path information for the Catchup stream              |
-| **Expire (s)**        | Storage time information for the Catchup stream (seconds)    |
-| **Scanning time (s)** | Regular storage drive scan time (seconds) for Catchup stream |
+| Metrics                            | **Description**                                     |
+| ---------------------------------- | --------------------------------------------------- |
+| **Storage Data Path**              | Thông tin về đường dẫn lưu trữ của thước đo dữ liệu |
+| Retention (day) | Thời gian lưu trữ cho data metrics                  |
 
-| Metrics               | **Description**                                    |
-| --------------------- | -------------------------------------------------- |
-| **Storage Data Path** | Information about the storage path of data metrics |
-| **Retention (day)**   | Storage time for data metrics                      |
+| **Log**                                | **Mô tả**                                       |
+| -------------------------------------- | ----------------------------------------------- |
+| **Đường dẫn Log**                      | Thông tin đường dẫn lưu trữ Log của máy chủ     |
+| **Hết hạn (ngày)**  | Thời gian lưu trữ Log (ngày) |
+| **File quay**                          | Số lượng file quay                              |
+| **Kích thước (MB)** | Kích thước tệp                                  |
 
-| **Log**           | **Description**             |
-| ----------------- | --------------------------- |
-| **Log Path**      | Server log path information |
-| **Expire (day)**  | Log storage time (days)     |
-| **Rotation file** | Number of rotation files    |
-| **Size (MB)**     | File size                   |
+## Lựa chọn ứng dụng
 
-##  Select application
+Để cài đặt máy chủ, người dùng có thể chọn ứng dụng từ danh sách ứng dụng (nếu đã có ứng dụng) hoặc [tạo một ứng dụng mới](../04-getting-started/02-create-application.md) (nếu chưa có ứng dụng nào).
 
-To set up the server, user can select app from the application list (if an application already exists) or [create a new application](../04-getting-started/02-create-application.md) (if no application exists).
-
-
-
-**Step 1**: On the [server registration page](#access-the-server-registration-page), click button “**Register server**”
+**Bước 1**: Trên [server registration page](#access-the-server-registration-page), nhấp vào nút “**Đăng ký máy chủ**”
 
 ![alt text](/images/media-server/register-server-on-M/triggle-register.png)
 
-The system displays the application list screen.
+Hệ thống hiển thị màn hình danh sách ứng dụng.
 
 ![The application list screen](/images/media-server/register-server-on-M/select-app-1.png)
 
-**Step 2:**  User proceeds to select an application for server setup
+**Bước 2:** Người dùng tiếp tục chọn một ứng dụng để cài đặt máy chủ
 
-The system **automatically** proceeds to the Set up server.
+Hệ thống tự động chuyển tiếp đến bước Thiết lập máy chủ.
 
+## **Thiết lập máy chủ**
 
+Cấu hình các tùy chọn để triển khai máy chủ vào hệ thống Sigma Media với ứng dụng được chọn.
 
-##  **Set up server**
-
-Configure the options to deploy the server onto the Sigma Media system with the selected application.
-
-
-**Step 1:** After [selecting the application](#select-application) or [create a new application](../04-getting-started/02-create-application.md), the system navigates to the Set up server screen
+**Bước 1:** Sau khi [chọn ứng dụng](#select-application) or [tạo một ứng dụng mới](../04-getting-started/02-create-application.md), hệ thống điều hướng đến màn hình Thiết lập máy chủ
 
 ![Set-up-server](/images/media-server/register-server-on-M/set-up-server.png)
 
-With the following detailed information:
+Với các thông tin chi tiết sau:
 
-- **Server Type:** Default registration for Sigma Media Server Pro.
-- **Server Name:** Required entry, does not support accented characters, does not contain spaces
-- **Network Configuration**: Enter or select field IP addres/ domain name, the system automatically generates data for ***RTMP Public URI, SRT Public URI, Web RTC Public URI, HTTP Public URI***
-- **Advanced Settings** includes:
-  - **Ingest App:** Default is ***enabled***, allows users to enable/disable Ingest app configuration
-  - **Origin App:** Default is ***enabled***, allows users to enable/disable Origin app configuration
-  - **Log path:** Allows input or select (click button "Pick"), default value: `/var/log/sigma-machine`
-    - **Expire (day)**: default value: 7, min-max value: 1-360
-    - **Rotation File**: default value: 10, min-max value: 1-100
-    - **Size (MB)**: default value: 50, min-max value: 10-1024
-  - **Data Dir:** Allows input or select (click button "Pick"), default value: `/data/transcode`
-    - **Expire (s)**: default value: 604 800, min-max value: 10-31104000
-    - **Scanning time (s)**: default value: 360, min-max value: 10-31104000
-  - **Catchup Dir:** Allows input or select (click button "Pick"), default value: `/data/transcode`
-    - **Expire (s)**: default value: 604 800, min-max value: 10-31104000
-    - **Scanning time (s)**: default value: 360, min-max value: 10-31104000
-  - **Storage Data Path**: Allows input or select (click button "Pick"), default value: `/etc/sigma-machine/apps/victoria-metrics/victoria-metrics-data`
-    - **Retention (day)**: default value: 7, min-max value: 1-90
-- **Button “Submit”:** Confirm server deployment
+- **Loại máy chủ:** Đăng ký mặc định cho Sigma Media Server Pro.
 
-**Step 2:** User fills in mandatory information and adjusts server configuration settings.
+- **Tên máy chủ:** Bắt buộc, không hỗ trợ ký tự có dấu, không chứa khoảng trắng
 
-**Step 3:** After completion, the user click button **“Submit"**. The system displays a confirmation pop-up, asking to confirm server deployment
+- **Cấu hình Mạng:** Nhập hoặc chọn địa chỉ IP/ tên miền, hệ thống tự động tạo dữ liệu cho _**RTMP Public URI, SRT Public URI, Web RTC Public URI, HTTP Public URI**_
+
+- Cài đặt Nâng cao bao gồm:
+
+  - **Ứng dụng Ingest:** Mặc định là _**kích hoạt**_, cho phép người dùng bật/tắt cấu hình ứng dụng Ingest
+
+  - **Ứng dụng Origin:** Mặc định là _**kích hoạt**_, cho phép người dùng bật/tắt cấu hình ứng dụng Origin
+
+  - Đường dẫn log: Cho phép nhập hoặc chọn (nhấp vào nút "Chọn"), giá trị mặc định:
+
+    ```
+    /var/log/sigma-machine
+    ```
+
+    - **Hết hạn (ngày)**: giá trị mặc định: 7, giá trị tối thiểu-tối đa: 1-360
+    - **File quay**: giá trị mặc định: 10, giá trị tối thiểu-tối đa: 1-100
+    - **Kích thước (MB)**: giá trị mặc định: 50, giá trị tối thiểu-tối đa: 10-1024
+
+  - Thư mục Dữ liệu: Cho phép nhập hoặc chọn (nhấp vào nút "Chọn"), giá trị mặc định:
+
+    ```
+    /data/transcode
+    ```
+
+    - **Hết hạn (s)**: giá trị mặc định: 604 800, giá trị tối thiểu-tối đa: 10-31104000
+    - **Thời gian quét (s)**: giá trị mặc định: 360, giá trị tối thiểu-tối đa: 10-31104000
+
+  - Thư mục Catchup: Cho phép nhập hoặc chọn (nhấp vào nút "Chọn"), giá trị mặc định:
+
+    ```
+    /data/transcode
+    ```
+
+    - **Hết hạn (s)**: giá trị mặc định: 604 800, giá trị tối thiểu-tối đa: 10-31104000
+    - **Thời gian quét (s)**: giá trị mặc định: 360, giá trị tối thiểu-tối đa: 10-31104000
+
+  - Đường dẫn Dữ liệu Lưu trữ: Cho phép nhập hoặc chọn (nhấp vào nút "Chọn"), giá trị mặc định:
+
+    ```
+    /etc/sigma-machine/apps/victoria-metrics/victoria-metrics-data
+    ```
+
+    - **Lưu giữ (ngày)**: giá trị mặc định: 7, giá trị tối thiểu-tối đa: 1-90
+
+- **Nút “Xác nhận”:** Xác nhận triển khai máy chủ
+
+**Bước 2:** Người dùng điền thông tin bắt buộc và điều chỉnh cài đặt cấu hình máy chủ.
+
+**Bước 3:** Sau khi hoàn tất, người dùng nhấp vào nút **“Gửi"**. Hệ thống hiển thị một cửa sổ pop-up xác nhận, yêu cầu xác nhận triển khai máy chủ
 
 ![Pop-up-confirm](/images/media-server/register-server-on-M/pop-up-cf.png)
 
-**Step 4:** User confirms the deployment by click button "Yes”.
+**Bước 4:** Người dùng xác nhận triển khai bằng cách nhấp vào nút "Có”.
 
-The system displays a notification screen indicating successful deployment.
+Hệ thống hiển thị màn hình thông báo chỉ ra việc triển khai thành công.
 
 ![sucessful-register](/images/media-server/register-server-on-M/sucessful-register.png)
 
@@ -160,11 +179,9 @@ The system displays a notification screen indicating successful deployment.
 
 - **Text button “Go to Sigma Portal”:** The system opens the [Server management](#view-server-information-on-the-cms) screen (CMS) with the newly registered application.
 
-## Manage information on the Dashboard 
+## Manage information on the Dashboard
 
 After successfully deploying the server, users can manage registration information at the Dashboard Web UI.
-
-
 
 ### View information on the Dashboard
 
@@ -179,14 +196,16 @@ With the following detailed information:
 - **Server Info** includes Type, Status, Operating System, IPAddress, Port, Ram Usage, CPU Usage, GPU Usage and Version [(see more details)](#access-the-server-registration-page)
 
 - **License info**  includes License Code and License Status [(see more details)](#access-the-server-registration-page)
+
 - **Registration Info** includes Name, App ID, Ingest App and Origin App [(see more details)](#access-the-server-registration-page)
+
 - **Advanced Settings** includes Storage, Metrics, Log [(see more details)](#access-the-server-registration-page)
+
 - **Button “Edit”**: To perform the action of [updating server configuration](#update-server-configuration).
+
 - **Button “Re-Register Server”**: To re-register the server.
+
 - **Button “App Editor”**: The system opens the Sigma Portal screen with the newly registered application. [(see more details)](#manage-information-on-the-cms)
-
-
-
 
 ### Update server configuration
 
@@ -203,12 +222,9 @@ The system displays editable fields for information modification [(see more deta
 
 **Step 2:** User input mandatory information.
 
-**Step 3:** After completion, the user clicks button **“Save”**. 
+**Step 3:** After completion, the user clicks button **“Save”**.
 
 The system saves the new information for the server configuration, displaying the updated information on the screen.
-
-
-
 
 ## Manage information on the CMS
 
@@ -225,15 +241,11 @@ The system displays the Server list screen of the application (CMS) with informa
 - **Server type:** Pro
 - **Server status:** Running
 
-
-
 ### **View license information on the CMS**
 
 Continuing from **step 4** of the [Set up server](#set-up-server), user clicks button “Go to Sigma Portal” or clicks button “App Editor” on the [Dashboard](#view-information-on-the-dashboard)
 
-
 The system displays the Server list screen of the application (CMS), choose **License tab**
-
 
 The system displays the License List screen of the application, with information about servers registered from the marketplace marked with the following details:
 

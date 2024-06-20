@@ -10,9 +10,9 @@ First, we will install Sigma Media Server. It is a powerful software application
 Example installation of version **sigma media server** **3.0.8** on ubuntu
 
 ```bash
-wget https://minio.sigma.video:9000/debian/sigma-server-live_3.0.8-2_amd64.deb
-chmod +x sigma-server-live_3.0.8-2_amd64.deb
-sudo apt-get install ./sigma-server-live_3.0.8-2_amd64.deb
+ wget https://repo.sigma.video/debian/sigma-media-server.list -O /etc/apt/sources.list.d/sigma-media-server.list
+ sudo apt-get update
+ sudo apt-get install sigma-media-server
 ```
 
 ## Start Service

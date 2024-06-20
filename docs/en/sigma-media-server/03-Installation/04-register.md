@@ -1,13 +1,13 @@
 ---
 title: Server registration
-order: 4
+order: 6
 ---
 
 # Sigma Media Server Registration Guide
 
 ## Request
 
-The Sigma Media Server system requires the server to be registered before use. To register the server, you need to have an account on the [Sigma Video](https://sigma.video/) system. If you do not have an account, register for one at [here](https://portal.sigmaott.com/auth/login).
+The Sigma Media Server system requires the server to be registered before use. To register the server, you need to have an account on the [Sigma Video](https://sigma.video/) system. Nếu bạn chưa có tài khoản, hãy đăng kí tài khoản tại [đây](https://portal.sigma.video/auth/login).
 
 After logging in, you will see the main screen of the Sigma Streaming Platform management system, select the desired App. Select the item **Server** and select **Add server**.
 
@@ -52,7 +52,7 @@ Example:
 
 ## Add licenses to the server
 
-After registering the server, you need to add licenses to the server. You can do this by following the instructions here [license](../04-getting-started/05-add-license.md#way-2-access-to-server-management)
+After registering the server, you need to add licenses to the server. You can do this by following the instructions here [license](.. /04-getting-started/05-add-license.md#way-2-access-to-server-management)
 
 ## Restart the service
 
@@ -64,4 +64,4 @@ sudo systemctl restart sigma-media-server
 
 Good luck in installing and using Sigma Media Server! If you face any problems, do not hesitate to contact us to get assistance. We're always happy to help you.
 
-Access the service's portal to perform server-related operations [Portal Sigma Streaming Platform](https://portal.sigmaott.com/auth/login)
+Truy cập portal của dịch vụ để thực hiện các thao tác liên quan đến máy chủ [Portal Sigma Streaming Platform](https://portal.sigma.video/auth/login)

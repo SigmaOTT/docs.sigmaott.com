@@ -16,7 +16,7 @@ At the main interface, select the profile to delete. The system will display the
 
 The user clicks on the 'Delete' icon, the system will open a confirmation pop-up window in the middle of the screen.
 
-![Delete profile](/images/media-live/profile/delete.png)
+! [Delete profile] (/images/media-live/profile/delete.png)
 
 _Pop-up profile deletion_
 

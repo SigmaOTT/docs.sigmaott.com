@@ -5,9 +5,7 @@ order: 1
 
 Sigma Server consists of three types:
 
-1. Sigma Live Server
-2. Sigma VOD Server
-3. Component Server
+1. Sigma Media Server
 
 ### How the server works
 

@@ -13,7 +13,7 @@ To create a manually packaged channel, perform the basic funnel creation steps. 
 
 The interface screen for configuring the packaging channel appears as follows:
 
-![Create a manually packaged channel](/images/media-live/um-create-channel/um-create-package-channel-1.png)
+! [Create a manually packaged channel] (/images/media-live/um-create-channel/um-create-package-channel-1.png)
 
 In which the menu bar on the right will have the following items:
 
@@ -41,7 +41,7 @@ In the basic packaging channel configuration is divided into the following items
 - **Name modifier**: The alternate name of the channel must be unique throughout the system, serving to query the manifest 1 file briefly
 
 :::tip
-For example, if the alternate name is **VTV1**: the manifest access link will look like this: _http\://origin/com/manifest/VTV1/manifest_name_
+For example, if the alternate name is **VTV1**: the manifest access link will look like this: _http://origin/com/manifest/VTV1/manifest_name_
 :::
 
 - **Options**: Advanced configuration of the channel
@@ -81,4 +81,34 @@ After initializing 1 desired output. The configuration of the output will appear
   - **Counter**: Number of Segment files saved in **manifest** file
   - **Time**: toggle display tag: **Programing-date-time** used with HLS output
 
-- 
+- **DRM**: Configure DRM encryption
+  - **Enable**: Configure DRM toggle
+  - **Key provider**: A method of providing an encryption key, static or obtained from the server containing the encryption key
+    - **static**: static encryption key
+    - **sigma-drm**: Sigma Drm encryption system
+    - **Sigma-drm-v1**: Sigma DRM V1 Encryption System
+    - **Sigma-multi-drm**: Multi-DRM encryption system supporting Widevine, PlayReady, FairPlay implemented by Sigma drm
+    - **drmtoday**: Multi-DRM encryption system supporting Widevine, PlayReady, FairPlay implemented by castlab
+  - Set 'DRM Credential' if any for 'Sigma Multi DRM' 'DRMtoday'
+
+- **Low Latency**: Low Latency TV Configuration
+
+- **Catchup**: Catchup-timeshift Storage Configuration
+
+  - **Storage**: Turn catchup-timeshift storage mode on and off
+  - **Cache time**: Configure the desired unit storage time in hours
+  - **Trickplay**: Toggle Trickplay mode on and off with catchup
+
+- **Startover**: Toggle 'Startover' storage mode on and off
+
+- **Preset**: Configure profiles packed into this output
+
+### Instructions for configuring **preset** with output:
+
+1. choose! [select profile] (/images/media-live/um-create-channel/um-select-profile.png) { width=100px } to select the profiles that will be encapsulated in this output. The profile list panel will be displayed
+2. Check the box to select the **profile** you want to add to the output => click **submit** to complete the operation
+3. The list of selected profiles will appear, you can manipulate the desired tasks for this list such as adding, deleting, editing
+
+## B4. 'Submit' Save channel
+
+After saving the channel, the system will automatically 'start' the channel and its outputs corresponding to each target

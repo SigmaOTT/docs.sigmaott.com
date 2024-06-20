@@ -7,15 +7,15 @@ order: 1
 
 The Initialize Job function is used for both cases: creating a new channel and updating a running channel.
 
-- **If **name** matches an existing Job, the Job will be updated.
-- **If **name** does not match the existing Job, the Job will be created.
+- If **name** matches an existing Job, the Job will be updated.
+- If **name** does not match the existing Job, the Job will be created.
 
 ::: info
 
-- **Job's configuration parameters will not be saved when the server is turned off.
-- **Use the **mode** field to create a job for Live Channel or VOD Content.
-- **The **name** field is a unique identifier for the job and is used to update or disable the job.
-:::
+- Job's configuration parameters will not be saved when the server is turned off.
+- Use the **mode** field to create a job for Live Channel or VOD Content.
+- The **name** field is a unique identifier for the job and is used to update or disable the job.
+  :::
 
 ## Request
 
@@ -134,11 +134,11 @@ Where:
   - **name**: channel identifier to toggle on and off
   - **GPU**: GPU chip order, GPU list taken at dump command (NVIDIA only supported), -1 is CPU usage
   - **input**: input list
-  - **Profile**: List of profiles
+  - **profile**: list of profiles
   - **target**: target list
-  - **Watermark**: Common watermark for channel, if multiple use array
-  - **thumb**: create thumnail for the channel, if multiple use array
-  - **Option**: additional settings
+  - **watermark**: Common watermark for channel, if multiple array is used
+  - **thumb**: create thumnail for the channel, if many use array
+  - **option**: additional settings
   - **input**: can be 1 string, string array (multiple inputs), or 1 object for the channel with backup
 
 ### Ingredients in detail
@@ -151,12 +151,12 @@ Where:
   - **Audio**:
     - **sampleRate**: [44100(default), 48000]
     - **channel**: [1, 2(default), 6(5.1)]
-    - **Codec**: [Copy, AAC(Default), AC3, EAC3, MP2]
+    - **codec**: [copy, aac(default), ac3, eac3, mp2]
     - **profile**(AAC only): [aac_low(default), aac_he, aac_he_v2, aac_main, aac_ld, aac_eld]
     - **volume**: change volume from original stream
-      - **"+5dB", "-10dB": change by 1 amount)
-      - **0.5, 2 : 1 halving, double
-      - **"loudnorm": automatic according to EBU R128 standard
+      - "+5dB", "-10dB": change by 1 amount)
+      - 0.5, 2 : 1 halving, double
+      - "loudnorm": automatic according to EBU R128 standard
     - **language**: [2 characters string] en, vi, fr...
     - **group**: [string] group id
     - **label**: [string] display in player
@@ -164,4 +164,169 @@ Where:
     - **fps**: [20, 25(default), 30, 29.97, 59.94, 60]
     - **codec**: [H264(default), HEVC]
     - **pixelFormat**: [yuv420p(default), yuv444p, yuv420p10le, yuv444p10le]
-    - **width, height**: [0, height],
+    - **width, height**: [0, height], [width, 0], [width, height]
+    - **bitrate, minrate, maxrate, bufsize**: config bitrate
+    - **scaleType**: [fitWidth, fitHeight, fitInside, fitCrop, fitBoth, source]
+      (note: if you leave width, height, scaleType in the total option, the source will scale before further processing)
+    - **CBR**: [0, 1], Constant Bitrate mode enabled
+    - **CQ**: [0 -> 51], Constant Quality mode
+    - **VMAF**: [90 -> 92], target VMAF for Pte
+    - **interlaced**: [0, 1], interlaced video mode
+    - **watermark**: separate watermark for profile
+    - **profile, level**: [baseline(for GPU), Main 3.0 | 4.0, High 4.0 | 4.1 | 4.2]
+    - **Preset**:
+      - CPU: [VeryFast, Superfast]
+      - GPU: [LLHP, LLHQ]
+    - **RC**(GPU only): [cbr_hq, cbr_hp] for CBR, [vbr_hq, vbr_hp] for VBR, Rate Control write for Preset
+    - **iframe**: set iframe
+      - -1: Automatic detection based on manifest.ts
+      - 0 : according to the source
+      - [1->16]: seconds
+      - [17->300]: Number of frames
+    - **hdr**(pixelFormat yuv420p10le recommended, hevc codec): [copy, none, hdr10, hlg10, pq10] supports HDR output, currently only supports MP4 containers (dash or hls+fmp4)
+  - **data**: only copy codecs are supported
+
+- **target**:
+  - **format**: [RTMP, UDP, HLS, DASH, MSS, HDS, MP3, MP4, SRT, AAC, WAV, WEBVTT]
+  - **select**: configure the output profile, each element can be profileId, profileId array, object
+    - profileId: used for simple cases such as dash, mss
+    - profileId array: used when you want to group audio, video for hls, hds, for example:
+      select:[
+      [
+      "480p",
+      "480p-audio"
+      ]
+      ]
+    - object: used when you want to configure details for each profileId or profileId array, then the object will contain its own select and DRM object if any, for example:
+      select:[
+      {
+      "title":"VTV3", // Channel title for udp
+      "id": 15, // programId for udp
+      "DRM":{
+      "server":"http://drmproxy.com",
+      "filter":"widevine+playready+fairplay"
+      },
+      "select": [
+      "480p",
+      "480p-audio"
+      ]
+      }
+      ]
+  - **DRM**: DRM configuration
+    - Type:
+      AES_128: HLS
+      SAMPLE_AES: HLS TS(Fairplay)
+      SAMPLE_AES_CTR, SAMPLE_AES_CBC: HLS FMP4, Dash
+    - filter: [fairplay, widevine, playready, hls_widevine, hls_playready, dash_widevine, dash_playready], for multiDRM, filter DRM system for manifest
+    - Direct use:
+      - **URI**: Key URI for HLS
+      - **key, keyId, iv**: base64
+      - **widevine, playready**: base64 of PSSH respectively
+      - **systems**: [{"id":"systemId(edef8ba979d64acea3c827dcd51d21ed for widevine", "uri": "skd://...", "pssh": "base64 of pssh data"}]
+      - **expireTime**: the number of seconds that will retrieve the key information (used for proxy mode)
+    - Use proxy: data returned as {data: {drm info khi dùng trực tiếp}}
+      - **Server**: URL to get information
+      - **body**: body for request to server
+  - **Manifest**(for Dash, HLS)
+    - **ts**: [2 -> 10], ts duration
+
+    - **enableTime**(hls): [0, 1], insert timestamp into playlist
+
+    - **appendList**(hls): [0, 1], serial to old playlist
+
+    - **endList**(hls): [0, 1], insert endlist tag at end
+
+    - **cache**: [-1 -> n] the number of files TS retains when deleted from the playlist, -1 is retained
+
+    - **count**: [0 -> N], the number of TS kept in the playlist file, 0 is the whole
+
+    - **singleFile**: [0, 1], enable non-split file mode
+
+    - **fmp4**: [0, 1], use fmp4 format for segment
+
+    - Manage names, paths:
+      - Pattern support:
+        - **%%d, %%06d**: index of TS
+        - **%%b**: Bitrate of profile (only used for MSS, HDS)
+        - **%v**: the name of the video profile (or audio if there is no video)
+        - **%%r**: Add random numbers
+        - **%%t**: add ts startPts, used only for tsName dash
+        - \*\*., .. \*\*: relative path from primary URL
+      - **masterName, masterPath, tsName, tsPrefix, initName, initPrefix, initPath**
+      - **indexName, indexPath, indexPrefix**: only for dash
+      - MSS only supports %%b, %%d
+      - hds tsName is required to be Seg1-Frag%%d, at the same time tsPrefix must be non-empty (to avoid errors on some players), it is recommended to use: tsPrefix="%v/" tsPath "./%v/"
+
+    - **persistent**: [0, 1], keep HTTP connection when writing files
+
+    - **masterExtra**: [string array separated by commas], write down the master file with some other names
+
+    - **chunked**: [0.01 -> n], the number of seconds of chunk when using lowlatency or mp4
+
+    - **chunkedType**: ["fragment","range", "combine"], type low latency split or byte-range, default: fragment
+
+    - **segment**: [0 -> n], the number of seconds of cutting the video when using mp4 format
+
+    - **targetLatency**: [0 -> n], the number of latency seconds for lowlatency
+
+    - **minLatency**: [0 -> n], the number of seconds min latency for lowlatency(dash)
+
+    - **maxLatency**: [0 -> n], the number of seconds max latency for lowlatency(dash)
+
+    - **header**: custom object for header
+
+    - **buffer**: [0 -> 60], buffer time (suggestedPresentationDelay for dash, #EXT-X-START:TIME-OFFSET for hls)
+
+    - **useThread**: [0, 1], open thread for sending manifest
+
+- **watermark**: coordinates, wm size will base on 1920x1080 if there is no scale
+  - **x, y**: [0 -> 1920, 0 -> 1080]coordinates on video
+  - **id**: identifier to toggle on and off
+  - **scale**: [0.1 -> 3.0], watermark size scale + coordinates if needed
+  - **mediaScale**: [0.1 -> 3.0], content scale before processing
+  - **delay**: [0 -> 120], the number of seconds that stop between 2 loops, used for dynamic watermarking
+  - **enable**: [0, 1], hidden or visible, API controlled
+
+- **Thumbnails**
+  - **width**: [100 -> 1920]
+  - **delay**: [1 -> 60], time between 2 images
+  - **col, row**: [0 -> 10], used to create a tile for thumb, disabled by default
+
+- **option**
+  - **syncCopy**: [0 - > 2], default 0(disable), sync copy and transcode streams, 1 = drop non-idr keyframe, 2 = all frame
+  - **timeout**: [2 -> 10], default 6, thread breaks if stopped at input, output, transcode
+  - **syncStream**: [1 -> n], default 1, interrupt the stream if the sound and picture are offset
+  - **GPU**: [-1, N], GPU override in config
+  - **filterComplex**: custom filter for transcode (can use drag-and-drop interface on CMS to create)
+  - **xerror**: [0, 1] Channel reset if a potentially faulty packet is detected
+  - **maxSpeed**: [0.1 -> 10], (default 1.1), maximum channel speed
+  - **loop**: [0, n], number of file loops
+  - **limitInput**: [256 -> 2048], default 1024, maximum number of queue packets for slow processing
+  - **copyts**: [0, 1], copy timestamp from original stream, default enabled for hash-only channel
+  - **fixAac**: [0, 1], faulty AAC packet handling(causes player to stop on smartTV)
+  - **sound**: audio file when running pre event using image
+  - **preload**: [0, 1], renormalize video before running video pre events
+  - **id3**: [0, 1], add stream id3 to HLS TS outputs
+  - **s3Config**: the path to the s3 config file (s3 url is in the form s3://path/to/file), the default is data/s3.json, the file content is as follows:
+  - ```json
+    {
+        "accessKeyId": "<required>",
+        "secretAccessKey": "<required>",
+        "Bucket": "<required>",
+        "endpoint": "<optional>",
+        "region": "<optional>"
+    }
+    ```
+
+## Response
+
+Success syntax
+
+```json
+{
+  "ec": 0,
+  "result": {
+    "$job_name": "done"
+  }
+}
+```

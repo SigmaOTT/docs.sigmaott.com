@@ -1,12 +1,12 @@
----
-title: Monitor machine performance
+<!-- ---
+title: Giám sát hiệu suất hoạt động của máy
 order: 8
----
+--- -->
 
 The "Machine Performance Monitoring" function helps monitor, evaluate and ensure stable server performance to ensure that the system operates efficiently and reliably.
 
 Users can monitor with parameters:
-![Monitor](/images/media-server/getstarted/monitor.png)
+! [Monitor] (/images/media-server/getstarted/monitor.png)
 
 1. Ingest Input:
    1. Bandwidth: Statistics of bandwidth parameters of receiving and sending signals of Ingest input
